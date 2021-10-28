@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './Package.css'
 
 const Package = (props) => {
     const { imgURL, packageName, rating, price, duration} = props?.pack;
     return (
-        <div>
+        <div className="package">
             <div>
                 <img src={imgURL} alt="" />
             </div>
@@ -17,6 +19,7 @@ const Package = (props) => {
                     <h5>Rating: {rating}</h5>
                 </div>
             </div>
+            <Link to="/booknow"><button className="btn btn-danger">Book Now</button></Link>
         </div>
     );
 };
