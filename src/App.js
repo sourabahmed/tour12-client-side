@@ -8,6 +8,8 @@ import Footer from './pages/Footer/Footer';
 import Headers from './pages/Headers/Headers';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login';
+import PackageDetail from './pages/PackageDetail/PackageDetail';
+import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
             <Route exact path='/home'>
               <Home></Home>
             </Route>
+            <PrivateRoute exact path='/booknow/:detailId'>
+              <PackageDetail></PackageDetail>
+            </PrivateRoute>
             <Route exact path='/addPackage'>
               <AddPackage></AddPackage>
             </Route>

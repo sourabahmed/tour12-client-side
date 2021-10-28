@@ -20,10 +20,10 @@ const Headers = () => {
                             <Nav.Link ><Link to='/addPackage'>AddPackage</Link></Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link>{user.displayName}</Nav.Link>
+                            <Nav.Link>{user?.displayName}</Nav.Link>
 
                             {
-                                user.email? <button onClick={signOut} className="btn btn-danger">LogOut</button>:
+                                user?.email? <button onClick={signOut} className="btn btn-danger">LogOut</button>:
                                 <Nav.Link> <Link to='/login'><button className="btn btn-danger">Login</button></Link> </Nav.Link>
                             }
 

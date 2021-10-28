@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Package.css'
 
 const Package = (props) => {
-    const { imgURL, packageName, rating, price, duration} = props?.pack;
+    const { imgURL, packageName, rating, price, duration, _id} = props?.pack;
     return (
         <div className="package">
             <div>
@@ -19,7 +19,7 @@ const Package = (props) => {
                     <h5>Rating: {rating}</h5>
                 </div>
             </div>
-            <Link to="/booknow"><button className="btn btn-danger">Book Now</button></Link>
+            <Link to={`/booknow/${_id}`}><button className="btn btn-danger">Book Now</button></Link>
         </div>
     );
 };
