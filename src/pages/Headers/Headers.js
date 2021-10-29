@@ -12,13 +12,14 @@ const Headers = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand href="#home">Tour12</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link ><Link to='/home'>Home</Link></Nav.Link>
-                            <Nav.Link ><Link to='/addPackage'>AddPackage</Link></Nav.Link>
-                            <Nav.Link ><Link to='/orders'>MyOrders</Link></Nav.Link>
+                            <Nav.Link ><Link className="text-decoration-none text-white" to='/home'>Home</Link></Nav.Link>
+                            <Nav.Link ><Link className="text-decoration-none text-white" to='/addPackage'>AddPackage</Link></Nav.Link>
+                            <Nav.Link ><Link className="text-decoration-none text-white" to='/orders'>MyOrders</Link></Nav.Link>
+                            <Nav.Link ><Link className="text-decoration-none text-white" to='/manageOrders'>ManageOrders</Link></Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link>{user?.displayName}</Nav.Link>
@@ -28,9 +29,6 @@ const Headers = () => {
                                 <Nav.Link> <Link to='/login'><button className="btn btn-danger">Login</button></Link> </Nav.Link>
                             }
 
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
-                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -1,0 +1,13 @@
+.whyUs{
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 40px 100px;
+}
+.criteria{
+    background-color: rgba(1, 34, 11, 0.753);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
