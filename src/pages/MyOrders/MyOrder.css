@@ -1,0 +1,17 @@
+.my-orders{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 150px 20px;
+}
+.my-order{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+@media only screen and (max-width:668px){
+    .my-orders{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 10px;
+    }
+}

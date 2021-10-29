@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import './AddPackage.css'
 
 const AddPackage = () => {
     const { register, handleSubmit } = useForm();
@@ -14,21 +15,21 @@ const AddPackage = () => {
         .then(res => res.json())
         .then(data => {
             if(data.insertedId){
-                alert('Oreder successfull')
+                alert('a package added')
             }
         })
     }
     return (
-        <div>
-            <h1>This is add Package</h1>
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="mt-5">
+            <h2>Add a Package</h2>
+            <form className="addPackage-form" onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("packageName")}  placeholder="package name"/> <br />
                 <input {...register("imgURL")}  placeholder="Image url"/> <br />
                 <input {...register("rating")}  placeholder="Rating"/> <br />
                 <textarea {...register("description")}  placeholder="description"/> <br />
                 <input {...register("price")}  placeholder="Price"/> <br />
                 <input type="number" {...register("duration")} placeholder="days you wanna tour"/> <br />
-                <input type="submit" />
+                <input className="bg-danger text-white fs-5" type="submit" />
             </form>
         </div>
     );

@@ -26,31 +26,39 @@ const PackageDetail = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                if(data.insertedId){
+                    alert('ordered')
+                }
+            })
     }
     return (
-        <div className="row m-sm-2 m-lg-5 ">
+        <div className="row m-2 ">
             {/* <h2>This is package detail id {detailId}</h2> */}
 
-            <div className="col-sm-12 col-lg-7 border-end p-3">
-                <div className="w-50 mx-auto border border-dark">
+            <div className="col-sm-12 col-lg-7 border-end p-3 mt-sm-1 mt-lg-5">
+                <div className=" details mx-auto border border-dark">
                     <div>
                         <img className="img-fluid" src={apackage?.imgURL} alt="" />
                     </div>
-                    <div>
+                    <div className="p-3">
                         <p><small>{apackage?.description}</small></p>
                         <h3>{apackage?.packageName}</h3>
+                        <h4>${apackage?.price}</h4>
                     </div>
                 </div>
             </div>
-            <div className="col-sm-12 col-lg-5 border border-dark p-3">
-                <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="col-sm-12 col-lg-5">
+
+                <form className="from" onSubmit={handleSubmit(onSubmit)}>
+                    <h4>Please order</h4>
                     <input defaultValue={user.displayName} {...register("name")} placeholder="user name" /> <br />
                     <input defaultValue={user.email} {...register("email")} placeholder="user email" /> <br />
+                    <input defaultValue={apackage.packageName} {...register("packagename")} placeholder="Package Name" /> <br />
+                    <input defaultValue={apackage.price} {...register("price")} placeholder="Price" /> <br />
                     <input {...register("address")} placeholder="Addres" /> <br />
                     <input {...register("phone")} placeholder="phone" /> <br />
-                    <input defaultValue={apackage.price} {...register("price")} placeholder="Price" /> <br />
-                    <input type="submit" value="Order now" />
+                    <input className="bg-danger text-white" type="submit" value="Order now" />
                 </form>
             </div>
         </div>
@@ -58,3 +66,6 @@ const PackageDetail = () => {
 };
 
 export default PackageDetail;
+
+
+

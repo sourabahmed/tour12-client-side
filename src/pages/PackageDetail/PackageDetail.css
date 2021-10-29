@@ -1,0 +1,21 @@
+.details{
+    width: 50%;
+}
+.from{
+    margin-top: 100px;
+}
+.from input{
+    width: 80%;
+    margin: 8px;
+    padding: 5px;
+}
+
+@media only screen and (max-width:668px){
+    .details{
+        width: 100%;
+    }
+    .from input{
+        margin: 5px;
+    }
+
+}

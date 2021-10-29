@@ -1,0 +1,11 @@
+.addPackage-form input, textarea{
+    width: 50%;
+    margin: 5px;
+    padding: 3px;
+}
+
+@media only screen and (max-width:668px) {
+    .addPackage-form input, textarea{
+        width: 80%;
+    }
+}
