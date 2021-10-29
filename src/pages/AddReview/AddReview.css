@@ -1,0 +1,16 @@
+.review-from{
+    margin: 100px 20px;
+}
+.review-from input, textarea{
+    width: 50%;
+    margin: 6px;
+    padding: 3px;
+}
+@media only screen and (max-width:668px){
+    .review-from{
+        margin: 100px 10px;
+    }
+    .review-from input, textarea{
+        width: 90%;
+    }
+}
