@@ -5,7 +5,7 @@ import './AddPackage.css'
 const AddPackage = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/packages', {
+        fetch('https://fast-dusk-58420.herokuapp.com/packages', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

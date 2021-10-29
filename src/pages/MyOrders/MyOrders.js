@@ -8,7 +8,7 @@ const MyOrders = () => {
     const {user} = useAuth();
     console.log(orders);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://fast-dusk-58420.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setOrders(data))
     },[isDeleted])
@@ -19,7 +19,7 @@ const MyOrders = () => {
         console.log(`/deleteOreder/${id}`);
         const sure = window.confirm('Are you sure you want to delete this order')
        if(sure){
-        fetch(`http://localhost:5000/deleteOreder/${id}`, {
+        fetch(`https://fast-dusk-58420.herokuapp.com/deleteOreder/${id}`, {
             method: "DELETE",
             headers: {'Content-Type': 'application/json'}
         })

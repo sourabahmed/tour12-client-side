@@ -10,7 +10,7 @@ const Packages = () => {
     const [spinner, setSpinner] = useState(true);
     console.log(packages);
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch('https://fast-dusk-58420.herokuapp.com/packages')
         .then(res => res.json())
         .then(data => setPackages(data))
         setSpinner(false)

@@ -12,13 +12,13 @@ const PackageDetail = () => {
     const [apackage, setApackage] = useState({});
     console.log(apackage);
     useEffect(() => {
-        fetch(`http://localhost:5000/singlePackage/${detailId}`)
+        fetch(`https://fast-dusk-58420.herokuapp.com/singlePackage/${detailId}`)
             .then(res => res.json())
             .then(data => setApackage(data))
     }, [])
     // post orders
     const onSubmit = data => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://fast-dusk-58420.herokuapp.com/orders', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
