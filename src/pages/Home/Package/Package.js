@@ -3,23 +3,27 @@ import { Link } from 'react-router-dom';
 import './Package.css'
 
 const Package = (props) => {
-    const { imgURL, packageName, rating, price, duration, _id} = props?.pack;
+    const {description, imgURL, packageName, rating, price, duration, _id} = props?.pack;
     return (
         <div className="package">
             <div>
-                <img src={imgURL} alt="" />
+                <img className="img-fluid" src={imgURL} alt="" />
             </div>
-            <div>
-                <div>
-                    <h3>Price:{price}</h3>
-                    <h4>Days: {duration}</h4>
+            <div className="p-3">
+                <div className="d-flex justify-content-between">
+                    <h5>${price}/per person</h5>
+                    <h6>{duration} days</h6>
                 </div>
                 <div>
-                    <h3>{packageName}</h3>
+                    <h3 className="text-start">{packageName}</h3>
+                    <p><small>{description.slice(0, 100)}</small></p>
+                </div>
+                <div className="align-items-center d-flex justify-content-between">
                     <h5>Rating: {rating}</h5>
+                    <Link to={`/booknow/${_id}`}><button className="btn btn-danger">Book Now</button></Link>
                 </div>
             </div>
-            <Link to={`/booknow/${_id}`}><button className="btn btn-danger">Book Now</button></Link>
+            
         </div>
     );
 };

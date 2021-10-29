@@ -11,6 +11,7 @@ import Login from './pages/Login/Login';
 import MyOrders from './pages/MyOrders/MyOrders';
 import PackageDetail from './pages/PackageDetail/PackageDetail';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
+import NotFound from './pages/NotFound/NotFound'
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route path='/login'>
               <Login></Login>
+            </Route>
+            <Route exact path='*'>
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>
