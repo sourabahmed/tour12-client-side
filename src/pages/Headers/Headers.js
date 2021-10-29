@@ -18,6 +18,7 @@ const Headers = () => {
                         <Nav className="me-auto">
                             <Nav.Link ><Link to='/home'>Home</Link></Nav.Link>
                             <Nav.Link ><Link to='/addPackage'>AddPackage</Link></Nav.Link>
+                            <Nav.Link ><Link to='/orders'>MyOrders</Link></Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link>{user?.displayName}</Nav.Link>

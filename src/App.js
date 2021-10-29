@@ -8,6 +8,7 @@ import Footer from './pages/Footer/Footer';
 import Headers from './pages/Headers/Headers';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login';
+import MyOrders from './pages/MyOrders/MyOrders';
 import PackageDetail from './pages/PackageDetail/PackageDetail';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 
@@ -29,6 +30,9 @@ function App() {
             </PrivateRoute>
             <Route exact path='/addPackage'>
               <AddPackage></AddPackage>
+            </Route>
+            <Route exact path='/orders'>
+              <MyOrders></MyOrders>
             </Route>
             <Route path='/login'>
               <Login></Login>
