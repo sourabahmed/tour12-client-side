@@ -18,7 +18,7 @@ const Packages = () => {
     
     return (
         <div>
-            <h2>Packages</h2>
+            <h2 className="p-4">Packages</h2>
             {
                 spinner? <Spinner animation="border" role="status">
                             <span className="text-danger"></span>

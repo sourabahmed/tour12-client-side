@@ -1,3 +1,6 @@
+.addPackage-form{
+    margin-bottom: 100px;
+}
 .addPackage-form input, textarea{
     width: 50%;
     margin: 5px;
