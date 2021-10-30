@@ -7,20 +7,21 @@ import './Packages.css'
 
 const Packages = () => {
     const[packages, setPackages] = useState([]);
-    const [spinner, setSpinner] = useState(true);
-    console.log(packages);
+    const [spinner, setSpinner] = useState(null);
+    // console.log(packages);
     useEffect(() => {
         fetch('https://fast-dusk-58420.herokuapp.com/packages')
         .then(res => res.json())
         .then(data => setPackages(data))
         setSpinner(false)
     },[])
+    
     return (
         <div>
             <h2>Packages</h2>
             {
                 spinner? <Spinner animation="border" role="status">
-                            <span className="text-dark"></span>
+                            <span className="text-danger"></span>
                         </Spinner>:  
               <div className="packages">
                 {

@@ -22,7 +22,7 @@ const AddReview = () => {
     }
     return (
         <div>
-            <h2>Add a Package</h2>
+            <h2 className="m-4">Please give a review</h2>
             <form className="review-from" onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name")}  placeholder="Name"/> <br />
                 <input {...register("imgURL")}  placeholder="Image url"/> <br />

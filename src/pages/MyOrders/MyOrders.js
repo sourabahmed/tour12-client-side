@@ -6,7 +6,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const [isDeleted, setIsDeleted] = useState(null);
     const {user} = useAuth();
-    console.log(orders);
+    // console.log(orders);
     useEffect(() => {
         fetch('https://fast-dusk-58420.herokuapp.com/orders')
         .then(res => res.json())
@@ -41,7 +41,7 @@ const MyOrders = () => {
             
             {
                 orders.filter(data => data?.email === user?.email).map(order => 
-                    <div className="my-order">
+                    <div key={order._id} className="my-order">
                         <h5>Name:  {order.name}</h5>
                         <h6>Email:  {order.email}</h6>
                         <h4>Package: {order.packagename}</h4>

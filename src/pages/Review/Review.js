@@ -15,7 +15,7 @@ const Review = () => {
             <div className="reviews">
                 {
                     reviews?.map(review => 
-                    <div className="review">
+                    <div key={review._id} className="review">
                         <img className="img-fluid rounded-circle" src={review.imgURL} alt="" />
                         <h3>{review.name}</h3>
                         <h4>Traveller</h4>
