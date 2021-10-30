@@ -2,11 +2,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    margin: 150px 20px;
+    margin: 100px 20px 200px 20px;
 }
 .my-order{
-    border: 2px solid black;
+    border-radius: 10px;
     padding: 10px;
+    box-shadow: 0 0 5px 2px rgb(173, 165, 165);
 }
 
 @media only screen and (max-width:668px){

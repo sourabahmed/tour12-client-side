@@ -11,7 +11,7 @@ const MyOrders = () => {
         fetch('https://fast-dusk-58420.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setOrders(data))
-    },[isDeleted])
+    },[isDeleted]) 
 
     
 
@@ -38,7 +38,7 @@ const MyOrders = () => {
     }
     return (
         <div className="my-orders">
-            {/* <h1>This is orders page</h1> */}
+            
             {
                 orders.filter(data => data?.email === user?.email).map(order => 
                     <div className="my-order">
