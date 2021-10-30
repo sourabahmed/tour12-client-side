@@ -31,19 +31,19 @@ function App() {
             <PrivateRoute exact path='/booknow/:detailId'>
               <PackageDetail></PackageDetail>
             </PrivateRoute>
-            <Route exact path='/addPackage'>
+            <PrivateRoute exact path='/addPackage'>
               <AddPackage></AddPackage>
-            </Route>
-            <Route exact path='/orders'>
+            </PrivateRoute>
+            <PrivateRoute exact path='/orders'>
               <MyOrders></MyOrders>
-            </Route>
-            <Route exact path='/manageOrders'>
+            </PrivateRoute>
+            <PrivateRoute exact path='/manageOrders'>
               <ManageOrders></ManageOrders>
-            </Route>
+            </PrivateRoute>
             <Route exact path='/review'>
               <AddReview></AddReview>
             </Route>
-            <Route path='/login'>
+            <Route exact path='/login'>
               <Login></Login>
             </Route>
             <Route exact path='*'>

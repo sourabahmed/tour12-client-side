@@ -1,0 +1,29 @@
+
+.google-login{
+    margin: 150px;
+}
+.login{
+    width: 40%;
+    margin: 0 auto;
+    padding: 80px 40px;
+    box-shadow: 0 0 7px 5px rgb(173, 165, 165);
+    border-radius: 10px;
+}
+.login button{
+    background-color: rgb(255, 255, 255);
+    color: tomato;
+    font-weight: 800;
+    font-size: 1.2rem;
+    outline: tomato;
+    padding: 5px;
+    border-radius: 5px;
+}
+@media only screen and (max-width:668px){
+    .google-login{
+        margin: 50px 20px 300px 20px;
+    }
+    .login{
+        padding: 20px;
+        width: 100%;
+    }
+}
